@@ -44,24 +44,26 @@ class comentario{
         comentario(int,string,usuario);
         void setnumero(int);
         void settexto(string);
+        void setuser(usuario);
         int getnumero();
-        string gettexto();     
+        string gettexto();
+        usuario getuser();     
 };
 
 class fecha{
     private:
-      int dia;
-      int mes;
-      int anio;
+        int dia;
+        int mes;
+        int anio;
     public:
-      fecha();
-      fecha(int,int,int);
-      void setdia(int);
-      void setmes(int);
-      void setanio(int);
-      int getdia();
-      int getmes()
-
+        fecha();
+        fecha(int,int,int);
+        void setdia(int);
+        void setmes(int);
+        void setanio(int);
+        int getdia();
+        int getmes();
+        int getanio();
 };
 
 
@@ -69,7 +71,20 @@ class articulo{
     private:
         string titulo;
         string detalle;
-        
+        fecha fecha_publicacion;
+        autor autor_articulo;
+        comentario comentarios[100];
+    public:
+        articulo();
+        articulo(string,string,fecha,autor);
+        void settitulo(string);
+        void setdetalle(string);
+        void setfecha_publicacion(fecha);
+        void setautor_articulo(autor);
+        string gettitulo();
+        string getdetalle();
+        fecha getfecha_publicacion();
+        autor getautor_articulo();
 };
 
 
